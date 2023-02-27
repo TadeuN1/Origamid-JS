@@ -1,69 +1,42 @@
-// const pessoa = new Object({
-//   nome: 'Tadeu',
-// })
+// Crie uma função que verifique
+// corretamente o tipo de dado
 
-// console.log(pessoa);
-
-// const carro = {
-//   rodas: 4,
-//   init(valor){
-// this.marca = valor;
-// return this;
-//   },
-//   acelerar(){
-//     return this.marca + ' acelerou';
-//   },
-//   buzinar(){
-//     return this.marca + ' buzinou';
-//   }
-// }
-
-
-// const honda = Object.create(carro).init('Honda');
-// console.log(honda.acelerar());
-
-// const ferrari = Object.create(carro).init('Ferrari');
-// console.log(ferrari.acelerar());
-
-// const funcaoAutomovel = {
-//   acelerar() {
-//     return 'acelerou';
-//   },
-//   buzinar() {
-//     return 'buzinou';
-//   },
-// }
-
-// const moto = {
-//   rodas: 2,
-//   capacete: true,
-// }
-
-// const carro = {
-//   rodas: 4,
-//   mala: true,
-// }
-
-// Object.assign(moto, funcaoAutomovel);
-// Object.assign(carro, funcaoAutomovel);
-
-// console.log(moto);
-
-const moto = {
-  capacete: true,
+function verificarDado(dado){
+  return Object.prototype.toString.call(dado);
 }
 
+console.log(verificarDado('String'));
 
-Object.defineProperties(moto, {
-  rodas: {
+
+// Crie um objeto quadrado com
+// a propriedade lados e torne
+// ela imutável
+
+const quadrado = {};
+
+Object.defineProperties(quadrado, {
+  lados: {
+    value: 4,
     enumerable: true,
-   get(){
-     return this._rodas;
-   },
-   set(valor){
-    this._rodas = valor * 4
-   }
+
   }
 })
 
-console.log(moto);
+console.log(quadrado);
+
+// Previna qualquer mudança
+// no objeto abaixo
+const configuracao = {
+  width: 800,
+  height: 600,
+  background: '#333'
+}
+
+Object.freeze(configuracao);
+
+// Liste o nome de todas
+// as propriedades do
+// protótipo de String e Array
+
+console.log(Object.getOwnPropertyNames(String.prototype));
+console.log(Object.getOwnPropertyNames(Array.prototype));
