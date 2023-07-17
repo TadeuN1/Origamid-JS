@@ -1,14 +1,15 @@
-body{
+body {
   margin: 0px;
   background: #ccc;
 }
+
 label {
   display: block;
   margin-bottom: .5rem;
-  margin-top: .5rem;
+  margin-top: 1rem;
 }
 
-input{
+input {
   display: block;
 }
 
@@ -25,7 +26,7 @@ input{
   background: #eee;
   padding: 1rem;
   border-radius: 4px;
-  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .1);
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,.1);
 }
 
 .css {
@@ -36,8 +37,7 @@ input{
   flex-direction: column;
 }
 
-.css span{
+.css span {
   display: block;
   margin-bottom: .5rem;
-
 }
